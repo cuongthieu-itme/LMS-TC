@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'teachers' => 'المعلمون',
-    'teacher' => 'المعلم',
-    'is_center_manager' => 'مدير مركز',
-    'return_to_original_admin' => 'العودة للمدير الأصلي',
-    'is_examiner' => 'مختبر',
-    'examiner' => 'المختبر',
-    'details' => 'التفاصيل',
-    'teachers_count' => 'عدد المعلمون',
+    'teachers' => 'Giáo viên',
+    'teacher' => 'Giáo viên',
+    'is_center_manager' => 'Quản lý trung tâm',
+    'return_to_original_admin' => 'Quay lại quản trị viên gốc',
+    'is_examiner' => 'Người kiểm tra',
+    'examiner' => 'Người kiểm tra',
+    'details' => 'Chi tiết',
+    'teachers_count' => 'Số lượng giáo viên',
 ];

@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'books' => 'الكتب',
-    'book' => 'الكتاب',
-    'name' => 'الاسم',
-    'number_of_pages' => 'عدد الصفحات',
-    'image' => 'الصورة',
-    'books_count' => 'عدد الكتب',
+    'books' => 'Sách',
+    'book' => 'Cuốn sách',
+    'name' => 'Tên',
+    'number_of_pages' => 'Số trang',
+    'image' => 'Hình ảnh',
+    'books_count' => 'Số lượng sách',
 ];

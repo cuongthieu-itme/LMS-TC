@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'centers' => 'المراكز',
-    'center' => 'المركز',
-    'name' => 'الاسم',
-    'manager' => 'مدير',
-    'managers' => 'المديرين',
-    'projects_count' => 'عدد المشاريع',
-    'sections_count' => 'عدد الحلقات',
-    'teachers_count' => 'عدد المعلمون',
-    'students_count' => 'عدد الطلاب',
-    'exams_count' => 'عدد الاختبارات',
-    'lectures_count' => 'عدد المحاضرات',
-    'centers_count' => 'عدد المراكز',
+    'centers' => 'Các trung tâm',
+    'center' => 'Trung tâm',
+    'name' => 'Tên',
+    'manager' => 'Người quản lý',
+    'managers' => 'Người quản lý',
+    'projects_count' => 'Số lượng dự án',
+    'sections_count' => 'Số lượng lớp học',
+    'teachers_count' => 'Số lượng giáo viên',
+    'students_count' => 'Số lượng học sinh',
+    'exams_count' => 'Số lượng bài kiểm tra',
+    'lectures_count' => 'Số lượng bài giảng',
+    'centers_count' => 'Số lượng trung tâm',
 ];

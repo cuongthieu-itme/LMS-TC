@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'admins' => 'المشرفون',
-    'admin' => 'المشرف',
-    'admins_count' => 'عدد المشرفين',
+    'admins' => 'Quản trị viên',
+    'admin' => 'Quản trị viên',
+    'admins_count' => 'Số lượng quản trị viên',
 ];

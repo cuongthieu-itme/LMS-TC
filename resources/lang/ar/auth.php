@@ -3,15 +3,15 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | Dòng ngôn ngữ xác thực
     |--------------------------------------------------------------------------
     |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
+    | Các dòng ngôn ngữ sau được sử dụng trong quá trình xác thực để hiển thị
+    | các thông báo khác nhau đến người dùng. Bạn có thể tự do chỉnh sửa chúng
+    | theo yêu cầu của ứng dụng.
     |
     */
 
-    'failed' => 'بيانات الاعتماد هذه غير متطابقة مع البيانات المسجلة لدينا.',
-    'throttle' => 'عدد كبير جدا من محاولات الدخول. يرجى المحاولة مرة أخرى بعد :seconds ثانية.',
+    'failed' => 'Thông tin đăng nhập không khớp với dữ liệu trong hệ thống.',
+    'throttle' => 'Bạn đã đăng nhập quá nhiều lần. Vui lòng thử lại sau :seconds giây.',
 ];

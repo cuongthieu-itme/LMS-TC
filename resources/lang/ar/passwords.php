@@ -3,18 +3,18 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Password Reminder Language Lines
+    | Dòng ngôn ngữ nhắc nhở mật khẩu
     |--------------------------------------------------------------------------
     |
-    | The following language lines are the default lines which match reasons
-    | that are given by the password broker for a password update attempt
-    | has failed, such as for an invalid token or invalid new password.
+    | Các dòng ngôn ngữ sau là mặc định, phù hợp với các lý do mà hệ thống
+    | đưa ra khi việc cập nhật mật khẩu không thành công, chẳng hạn như mã
+    | không hợp lệ hoặc mật khẩu mới không đúng yêu cầu.
     |
     */
 
-    'password' => 'يجب أن لا يقل طول كلمة المرور عن ستة أحرف، كما يجب أن تتطابق مع حقل التأكيد',
-    'reset' => 'تمت إعادة تعيين كلمة المرور',
-    'sent' => 'تم إرسال تفاصيل استعادة كلمة المرور الخاصة بك إلى بريدك الإلكتروني',
-    'token' => '.رمز استعادة كلمة المرور الذي أدخلته غير صحيح',
-    'user' => 'لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني',
+    'password' => 'Mật khẩu phải có ít nhất sáu ký tự và khớp với trường xác nhận.',
+    'reset' => 'Mật khẩu của bạn đã được đặt lại!',
+    'sent' => 'Chúng tôi đã gửi đường dẫn đặt lại mật khẩu vào email của bạn!',
+    'token' => 'Mã đặt lại mật khẩu không hợp lệ.',
+    'user' => 'Không tìm thấy người dùng nào với địa chỉ email này.',
 ];

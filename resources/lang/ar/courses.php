@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'courses' => 'الدورات',
-    'course' => 'الدورة',
-    'title' => 'العنوان',
-    'short_description' => 'الوصف المختصر',
-    'description' => 'الوصف',
-    'image' => 'الصورة',
-    'courses_count' => 'عدد الدورات',
+    'courses' => 'Các khóa học',
+    'course' => 'Khóa học',
+    'title' => 'Tiêu đề',
+    'short_description' => 'Mô tả ngắn',
+    'description' => 'Mô tả',
+    'image' => 'Hình ảnh',
+    'courses_count' => 'Số lượng khóa học',
 ];

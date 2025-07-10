@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'notifications' => 'الاشعارات',
-    'notification' => 'الاشعار',
-    'text' => 'النص',
+    'notifications' => 'Thông báo',
+    'notification' => 'Thông báo',
+    'text' => 'Nội dung',
 ];

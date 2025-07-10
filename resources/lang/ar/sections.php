@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'sections' => 'الحلقات',
-    'section' => 'الحلقة',
-    'name' => 'الاسم',
-    'sections_count' => 'عدد الحلقات',
+    'sections' => 'Lớp học',
+    'section' => 'Lớp học',
+    'name' => 'Tên',
+    'sections_count' => 'Số lượng lớp học',
 ];

@@ -15,19 +15,19 @@
                     <div class="f-item link">
                         <h4>@lang('site.links')</h4>
                         <ul>
-                            <li>
-                                <a href="{{route('/')}}">الرئيسية</a>
-                            </li>
-                            <li>
-                                <a href="{{route('courses')}}">الدورات</a>
-                            </li>
-                            <li>
-                                <a href="{{route('contact-us')}}">تواصل معنا</a>
-                            </li>
-                            <li>
-                                <a href="{{route('about-us')}}">من نحن</a>
-                            </li>
-                        </ul>
+                          <li>
+                              <a href="{{ route('/') }}">Trang chủ</a>
+                          </li>
+                          <li>
+                              <a href="{{ route('courses') }}">Các khóa học</a>
+                          </li>
+                          <li>
+                              <a href="{{ route('contact-us') }}">Liên hệ</a>
+                          </li>
+                          <li>
+                              <a href="{{ route('about-us') }}">Giới thiệu</a>
+                          </li>
+                      </ul>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-6 item">

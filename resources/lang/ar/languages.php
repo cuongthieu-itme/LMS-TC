@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'languages' => 'اللغات',
-    'language' => 'اللغة',
-    'name' => 'الاسم',
-    'code' => 'كود',
-    'active' => 'فعال',
-    'en' => 'الانجليزية',
-    'ar' => 'العربية',
-    'fr' => 'الفرنسية',
-    'it' => 'إيطالي',
-    'de' => 'ألماني',
-    'ur' => 'أوردو',
+    'languages' => 'Ngôn ngữ',
+    'language' => 'Ngôn ngữ',
+    'name' => 'Tên',
+    'code' => 'Mã',
+    'active' => 'Kích hoạt',
+    'en' => 'Tiếng Anh',
+    'ar' => 'Tiếng Ả Rập',
+    'fr' => 'Tiếng Pháp',
+    'it' => 'Tiếng Ý',
+    'de' => 'Tiếng Đức',
+    'ur' => 'Tiếng Urdu',
 ];

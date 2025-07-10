@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'services' => 'الخدمات',
-    'service' => 'الخدمة',
-    'name' => 'الاسم',
-    'icon' => 'الايقونة',
+    'services' => 'Dịch vụ',
+    'service' => 'Dịch vụ',
+    'name' => 'Tên',
+    'icon' => 'Biểu tượng',
 ];

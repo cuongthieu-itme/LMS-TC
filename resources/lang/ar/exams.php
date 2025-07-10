@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'exams' => 'الاختبارات',
-    'exam' => 'الاختبار',
-    'name' => 'الاسم',
-    'statuses' => 'الحالات',
-    'status' => 'الحالة',
-    'assessment' => 'التقييم',
-    'requested' => 'تم رفع الاختبار',
-    'new_exam' => 'اختبار جديد',
-    'assigned_student_exams_count' => 'عدد الاختبارات المعينة للمختبر',
-    'exams_count' => 'عدد الاختبارات',
+    'exams' => 'Bài kiểm tra',
+    'exam' => 'Bài kiểm tra',
+    'name' => 'Tên',
+    'statuses' => 'Trạng thái',
+    'status' => 'Trạng thái',
+    'assessment' => 'Đánh giá',
+    'requested' => 'Đã nộp bài kiểm tra',
+    'new_exam' => 'Bài kiểm tra mới',
+    'assigned_student_exams_count' => 'Số bài kiểm tra được giao cho người kiểm tra',
+    'exams_count' => 'Số lượng bài kiểm tra',
 ];

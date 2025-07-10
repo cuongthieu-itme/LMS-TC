@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'logs' => 'السجلات',
-    'log' => 'سجل',
-    'action_by_user' => 'بواسطة المستخدم',
+    'logs' => 'Nhật ký hệ thống',
+    'log' => 'Bản ghi',
+    'action_by_user' => 'Thực hiện bởi người dùng',
 ];

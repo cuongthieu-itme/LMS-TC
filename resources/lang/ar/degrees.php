@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'degrees' => 'الدرجات العلمية',
-    'degree' => 'الدرجة العلمية',
-    'name' => 'الاسم',
-    'teachers_count' => 'عدد المدرسين',
+    'degrees' => 'Bằng cấp học thuật',
+    'degree' => 'Bằng cấp',
+    'name' => 'Tên',
+    'teachers_count' => 'Số lượng giáo viên',
 ];

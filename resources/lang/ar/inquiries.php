@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'inquiries' => 'تواصل معنا',
-    'title' => 'العنوان',
-    'email' => 'البريد الإلكتروني',
-    'body' => 'الرسالة',
+    'inquiries' => 'Liên hệ với chúng tôi',
+    'title' => 'Tiêu đề',
+    'email' => 'Email',
+    'body' => 'Nội dung tin nhắn',
 ];
