@@ -8,35 +8,31 @@ use Symfony\Component\HttpFoundation\Response;
 
 class Localization
 {
-    public function handle(Request $request, Closure $next): Response
-    {
-        $segments = $request->segments();
+  public function handle(Request $request, Closure $next): Response
+  {
+    $segments = $request->segments();
 
-        $firstSegment = array_shift($segments);
+    $firstSegment = array_shift($segments);
 
-        if ($firstSegment == 'en' || $firstSegment == 'ar') {
-            
-            return redirect()->to(implode('/', $segments));
-        }
+    if ($firstSegment == 'en' || $firstSegment == 'ar') {
 
-        if (session('locale')) {
+      return redirect()->to(implode('/', $segments));
+    }
 
-            app()->setLocale(session('locale'));
+    if (session('locale')) {
 
-        } else if (auth()->check() && auth()->user()->locale) {
+      app()->setLocale(session('locale'));
+    } else if (auth()->check() && auth()->user()->locale) {
 
-            app()->setLocale(auth()->user()->locale);
+      app()->setLocale(auth()->user()->locale);
+    } else {
 
-        } else {
+      app()->setLocale(config('app.locale'));
 
-            app()->setLocale(config('app.locale'));
+      session(['locale' => app()->getLocale()]);
+    } //end of else
 
-            session(['locale' => app()->getLocale()]);
-
-        }//end of else
-
-        return $next($request);
-
-    }//end of handle
+    return $next($request);
+  } //end of handle
 
 }//end of middleware
