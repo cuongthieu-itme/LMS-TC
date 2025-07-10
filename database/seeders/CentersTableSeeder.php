@@ -7,22 +7,19 @@ use Illuminate\Database\Seeder;
 
 class CentersTableSeeder extends Seeder
 {
-    public function run(): void
-    {
-        $centers = [
-            ['name' => 'مركز 1',],
+  public function run(): void
+  {
+    $centers = [
+      ['name' => 'Trung tâm 1'],
+      ['name' => 'Trung tâm 2'],
+      ['name' => 'Trung tâm 3'],
+    ];
 
-            ['name' => 'مركز 2',],
+    foreach ($centers as $center) {
 
-            ['name' => 'مركز 3',],
-        ];
+      Center::create($center);
+    } //end of foreach
 
-        foreach ($centers as $center) {
-
-            Center::create($center);
-
-        }//end of foreach
-
-    }//end of run
+  } //end of run
 
 }//end of seeder

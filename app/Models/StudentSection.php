@@ -7,27 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudentSection extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['student_id', 'section_id', 'center_id'];
+  protected $fillable = ['student_id', 'section_id', 'center_id'];
 
-    //attr
+  //attr
 
-    //scope
+  //scope
 
-    //rel
-    public function student()
-    {
-        return $this->belongsTo(User::class, 'student_id');
+  //rel
+  public function student()
+  {
+    return $this->belongsTo(User::class, 'student_id');
+  } // end of student
 
-    }// end of student
+  public function section()
+  {
+    return $this->belongsTo(Section::class, 'section_id');
+  } // end of section
 
-    public function section()
-    {
-        return $this->belongsTo(Section::class, 'section_id');
-
-    }// end of section
-
-    //fun
+  //fun
 
 }//end of model

@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inquiry extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    //attr
+  //attr
 
-    protected $fillable = ['title', 'email', 'message'];
+  protected $fillable = ['title', 'email', 'message'];
 
-    //scope
+  //scope
 
-    //rel
+  //rel
 
-    //fun
+  //fun
 
 }//end of model

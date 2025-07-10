@@ -7,21 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['name', 'icon'];
+  protected $fillable = ['name', 'icon'];
 
-    //attr
-    public function getIconPathAttribute()
-    {
-        return asset('storage/uploads/' . $this->icon);
+  //attr
+  public function getIconPathAttribute()
+  {
+    return asset('storage/uploads/' . $this->icon);
+  } // end of getIconPathAttribute
 
-    }// end of getIconPathAttribute
+  //scope
 
-    //scope
+  //rel
 
-    //rel
-
-    //fun
+  //fun
 
 }//end of model

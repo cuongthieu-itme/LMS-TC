@@ -7,21 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Language extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['name', 'code', 'country_flag_code', 'active'];
+  protected $fillable = ['name', 'code', 'country_flag_code', 'active'];
 
-    //attr
+  //attr
 
-    //scope
-    public function scopeActive($query)
-    {
-        return $query->where('active', 1);
+  //scope
+  public function scopeActive($query)
+  {
+    return $query->where('active', 1);
+  } // end of active
 
-    }// end of active
+  //rel
 
-    //rel
-
-    //fun
+  //fun
 
 }//end of model

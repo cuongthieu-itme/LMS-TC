@@ -8,41 +8,37 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['name'];
+  protected $fillable = ['name'];
 
-    //attr
+  //attr
 
-    //scope
+  //scope
 
-    //rel
-    public function teachers()
-    {
-        return $this->hasMany(User::class)
-            ->where('type', UserTypeEnum::TEACHER);
+  //rel
+  public function teachers()
+  {
+    return $this->hasMany(User::class)
+      ->where('type', UserTypeEnum::TEACHER);
+  } // end of teachers
 
-    }// end of teachers
+  public function students()
+  {
+    return $this->hasMany(User::class)
+      ->where('type', UserTypeEnum::STUDENT);
+  } // end of student
 
-    public function students()
-    {
-        return $this->hasMany(User::class)
-            ->where('type', UserTypeEnum::STUDENT);
+  public function governorates()
+  {
+    return $this->hasMany(Governorate::class);
+  } // end of governorates
 
-    }// end of student
+  // public function areas()
+  // {
+  //   return $this->hasManyThrough(Area::class, Governorate::class);
+  // } // end of areas
 
-    public function governorates()
-    {
-        return $this->hasMany(Governorate::class);
-
-    }// end of governorates
-
-    public function areas()
-    {
-        return $this->hasManyThrough(Area::class, Governorate::class);
-
-    }// end of areas
-
-    //fun
+  //fun
 
 }// end of model

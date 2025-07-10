@@ -8,44 +8,39 @@ use Illuminate\Database\Eloquent\Model;
 
 class Governorate extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['country_id', 'name'];
+  protected $fillable = ['country_id', 'name'];
 
-    //attr
+  //attr
 
-    //scope
-    public function scopeWhenCountryId($query, $countryId)
-    {
-        return $query->when($countryId, function ($q) use ($countryId) {
+  //scope
+  public function scopeWhenCountryId($query, $countryId)
+  {
+    return $query->when($countryId, function ($q) use ($countryId) {
 
-            return $q->where('country_id', $countryId);
+      return $q->where('country_id', $countryId);
+    });
+  } // end of scopeWhenCountryId
 
-        });
+  //rel
+  public function country()
+  {
+    return $this->belongsTo(Country::class);
+  } // end of country
 
-    }// end of scopeWhenCountryId
+  public function students()
+  {
+    return $this->hasMany(User::class)
+      ->where('type', UserTypeEnum::STUDENT);
+  } // end of students
 
-    //rel
-    public function country()
-    {
-        return $this->belongsTo(Country::class);
+  public function teachers()
+  {
+    return $this->hasMany(User::class)
+      ->where('type', UserTypeEnum::TEACHER);
+  } // end of teachers
 
-    }// end of country
-
-    public function students()
-    {
-        return $this->hasMany(User::class)
-            ->where('type', UserTypeEnum::STUDENT);
-
-    }// end of students
-
-    public function teachers()
-    {
-        return $this->hasMany(User::class)
-            ->where('type', UserTypeEnum::TEACHER);
-
-    }// end of teachers
-
-    //fun
+  //fun
 
 }//end of model

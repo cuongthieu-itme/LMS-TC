@@ -7,36 +7,32 @@ use Illuminate\Database\Eloquent\Model;
 
 class Exam extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['project_id', 'name'];
+  protected $fillable = ['project_id', 'name'];
 
-    //attr
+  //attr
 
-    //scope
-    public function scopeWhenProjectId($query, $projectId)
-    {
-        return $query->when($projectId, function ($q) use ($projectId) {
+  //scope
+  public function scopeWhenProjectId($query, $projectId)
+  {
+    return $query->when($projectId, function ($q) use ($projectId) {
 
-            return $q->where('project_id', $projectId);
+      return $q->where('project_id', $projectId);
+    });
+  } // end of scopeWhenProjectId
 
-        });
+  //rel
+  public function project()
+  {
+    return $this->belongsTo(Project::class);
+  } // end of project
 
-    }// end of scopeWhenProjectId
+  public function studentExams()
+  {
+    return $this->hasMany(StudentExam::class);
+  } // end of studentExams
 
-    //rel
-    public function project()
-    {
-        return $this->belongsTo(Project::class);
-
-    }// end of project
-
-    public function studentExams()
-    {
-        return $this->hasMany(StudentExam::class);
-
-    }// end of studentExams
-
-    //fun
+  //fun
 
 }//end of model

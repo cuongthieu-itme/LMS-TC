@@ -8,27 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Degree extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['name'];
+  protected $fillable = ['name'];
 
-    //attr
+  //attr
 
-    //scope
+  //scope
 
-    //rel
-    public function teachers()
-    {
-        return $this->hasMany(User::class)
-            ->where('type', UserTypeEnum::TEACHER);
+  //rel
+  public function teachers()
+  {
+    return $this->hasMany(User::class)
+      ->where('type', UserTypeEnum::TEACHER);
+  } // end of teachers
 
-    }// end of teachers
-
-    //fun
-    public function canBeDeleted()
-    {
-        return $this->teachers->count() == 0;
-
-    }// end of canBeDeleted
+  //fun
+  public function canBeDeleted()
+  {
+    return $this->teachers->count() == 0;
+  } // end of canBeDeleted
 
 }//end of model

@@ -7,85 +7,72 @@ use Illuminate\Database\Eloquent\Model;
 
 class Log extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['student_id', 'center_id', 'project_id', 'section_id', 'action_by_user_id'];
+  protected $fillable = ['student_id', 'center_id', 'project_id', 'section_id', 'action_by_user_id'];
 
-    //attr
+  //attr
 
-    //scope
-    public function scopeWhenStudentId($query, $studentId)
-    {
-        return $query->when($studentId, function ($q) use ($studentId) {
+  //scope
+  public function scopeWhenStudentId($query, $studentId)
+  {
+    return $query->when($studentId, function ($q) use ($studentId) {
 
-            return $q->where('student_id', $studentId);
+      return $q->where('student_id', $studentId);
+    });
+  } // end of scopeWhenStudentId
 
-        });
+  public function scopeWhenCenterId($query, $centerId)
+  {
+    return $query->when($centerId, function ($q) use ($centerId) {
 
-    }// end of scopeWhenStudentId
+      return $q->where('center_id', $centerId);
+    });
+  } // end of scopeWhenCenterId
 
-    public function scopeWhenCenterId($query, $centerId)
-    {
-        return $query->when($centerId, function ($q) use ($centerId) {
+  public function scopeWhenProjectId($query, $projectId)
+  {
+    return $query->when($projectId, function ($q) use ($projectId) {
 
-            return $q->where('center_id', $centerId);
+      return $q->where('project_id', $projectId);
+    });
+  } // end of scopeWhenProjectId
 
-        });
+  public function scopeWhenSectionId($query, $sectionId)
+  {
+    return $query->when($sectionId, function ($q) use ($sectionId) {
 
-    }// end of scopeWhenCenterId
-
-    public function scopeWhenProjectId($query, $projectId)
-    {
-        return $query->when($projectId, function ($q) use ($projectId) {
-
-            return $q->where('project_id', $projectId);
-
-        });
-
-    }// end of scopeWhenProjectId
-
-    public function scopeWhenSectionId($query, $sectionId)
-    {
-        return $query->when($sectionId, function ($q) use ($sectionId) {
-
-            return $q->where('section_id', $sectionId);
-
-        });
-
-    }// end of scopeWhenSectionId
+      return $q->where('section_id', $sectionId);
+    });
+  } // end of scopeWhenSectionId
 
 
-    //rel
-    public function student()
-    {
-        return $this->belongsTo(User::class, 'student_id');
+  //rel
+  public function student()
+  {
+    return $this->belongsTo(User::class, 'student_id');
+  } // end of student
 
-    }// end of student
+  public function center()
+  {
+    return $this->belongsTo(Center::class);
+  } // end of center
 
-    public function center()
-    {
-        return $this->belongsTo(Center::class);
+  public function project()
+  {
+    return $this->belongsTo(Project::class);
+  } // end of project
 
-    }// end of center
+  public function section()
+  {
+    return $this->belongsTo(Section::class);
+  } // end of section
 
-    public function project()
-    {
-        return $this->belongsTo(Project::class);
+  public function actionByUser()
+  {
+    return $this->belongsTo(User::class, 'action_by_user_id');
+  } // end of actionByUser
 
-    }// end of project
-
-    public function section()
-    {
-        return $this->belongsTo(Section::class);
-
-    }// end of section
-
-    public function actionByUser()
-    {
-        return $this->belongsTo(User::class, 'action_by_user_id');
-
-    }// end of actionByUser
-
-    //fum
+  //fum
 
 }//end of model

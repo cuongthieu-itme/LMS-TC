@@ -7,14 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['title', 'short_description', 'description', 'image',];
+  protected $fillable = ['title', 'short_description', 'description', 'image',];
 
-    public function getImagePathAttribute()
-    {
-        return asset('storage/uploads/' . $this->image);
-
-    }// end of getImagePathAttribute
+  public function getImagePathAttribute()
+  {
+    return asset('storage/uploads/' . $this->image);
+  } // end of getImagePathAttribute
 
 }//end of model

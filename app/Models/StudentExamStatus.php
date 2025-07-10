@@ -7,21 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudentExamStatus extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['student_exam_id', 'status'];
+  protected $fillable = ['student_exam_id', 'status'];
 
-    //attr
+  //attr
 
-    //scope
+  //scope
 
-    //rel
-    public function studentExam()
-    {
-        return $this->belongsTo(StudentExam::class);
+  //rel
+  public function studentExam()
+  {
+    return $this->belongsTo(StudentExam::class);
+  } // end of studentExam
 
-    }// end of studentExam
-
-    //fun
+  //fun
 
 }//end of model

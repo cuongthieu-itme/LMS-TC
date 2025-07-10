@@ -6,19 +6,18 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class TeacherCenterSection extends Pivot
 {
-    protected $fillable = ['teacher_id', 'center_id', 'grade_id'];
+  protected $fillable = ['teacher_id', 'center_id', 'grade_id'];
 
-    //attr
+  //attr
 
-    //scope
+  //scope
 
-    //rel
-    public function teacher()
-    {
-        return $this->belongsTo(User::class, 'teacher_id');
+  //rel
+  public function teacher()
+  {
+    return $this->belongsTo(User::class, 'teacher_id');
+  } // end of teacher
 
-    }// end of teacher
-
-    //fun
+  //fun
 
 }//end of model

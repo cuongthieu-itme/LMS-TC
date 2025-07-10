@@ -7,21 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Slide extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $fillable = ['title', 'upper_title', 'image', 'link', 'status'];
+  protected $fillable = ['title', 'upper_title', 'image', 'link', 'status'];
 
-    //attr
-    public function getImagePathAttribute()
-    {
-        return asset('storage/uploads/' . $this->image);
+  //attr
+  public function getImagePathAttribute()
+  {
+    return asset('storage/uploads/' . $this->image);
+  } // end of getImagePathAttribute
 
-    }// end of getImagePathAttribute
+  //scope
 
-    //scope
+  //rel
 
-    //rel
-
-    //fun
+  //fun
 
 }//end of model
